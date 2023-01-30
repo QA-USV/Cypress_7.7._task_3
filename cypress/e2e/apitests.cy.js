@@ -6,6 +6,7 @@ describe('tests ipi', () => {
     cy.createUser(username, firstName, email, password)
       .then(response => {
         expect(response.status).equal(200)
+      
     })
   })
 
@@ -18,7 +19,7 @@ describe('tests ipi', () => {
   })
 
   it('should delete a user', () => {
-    // cy.createUser(username, firstName, email, password)
+    cy.createUser(username, firstName, email, password)
     cy.deleteUser(username)
       .then(response => {
         expect(response.status).equals(200)
