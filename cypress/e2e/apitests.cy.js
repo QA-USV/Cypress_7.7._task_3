@@ -19,7 +19,7 @@ describe('tests ipi', () => {
       .then(response => {
         expect(response.status).equals(200)
     })
-    cy.deleteUser(newUserName)
+    cy.deleteUser(username)
       .then(response => {
         expect(response.status).equals(200)
     }) 

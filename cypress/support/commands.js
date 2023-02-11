@@ -26,7 +26,7 @@
 
 import { username } from '../fixtures/variables.json'
 
-Cypress.Commands.add('createUser', (username, firstName, email, password) => {
+Cypress.Commands.add('createUser', () => {
     cy.request({
         url: '/',
         method: 'POST',
