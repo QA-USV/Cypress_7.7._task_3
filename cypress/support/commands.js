@@ -46,7 +46,7 @@ Cypress.Commands.add('updateUser', (newUserName) => {
         method: 'PUT',
         body: 
         {
-            newUserName
+            username: newUserName
         }
     })
 })

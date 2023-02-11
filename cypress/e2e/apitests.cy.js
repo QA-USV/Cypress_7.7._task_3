@@ -6,13 +6,20 @@ describe('tests ipi', () => {
     cy.createUser(username, firstName, email, password)
       .then(response => {
         expect(response.status).equal(200)
-      
+    })
+    cy.deleteUser(username)
+      .then(response => {
+        expect(response.status).equals(200)
     })
   })
-
+  
   it('should update a user name', () => {
     cy.createUser(username, firstName, email, password)
     cy.updateUser(newUserName)
+      .then(response => {
+        expect(response.status).equals(200)
+    })
+    cy.deleteUser(newUserName)
       .then(response => {
         expect(response.status).equals(200)
     }) 
